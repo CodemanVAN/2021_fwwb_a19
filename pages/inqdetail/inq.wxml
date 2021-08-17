@@ -1,0 +1,18 @@
+<input class="input_bar"  value="{{shebietag}}"placeholder="这里输入(支持工号，模糊设备名)" bindinput="taginput"/>
+<image class="t"  src="../../images/scan.png" bindtap='scan'mode="aspectFit"></image>
+<scroll-view scroll-y="true" class="scroll" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll">
+  <view wx:for="{{inqres}}">
+    <view class="box">
+      <image class="usericon" src="{{item.equipmentIcon}}"></image>
+        <label class="name">{{item.name}}</label>
+        <label class="partment">属于:{{item.department}}</label>
+        <label class="isborrowed" style="background-color:{{item.borrowed?'red':'blue'}}">{{item.borrowed?'已借出':'未借出'}}</label>
+        <label class="max_day">最长借出{{item.storageDays}}天</label>
+        <label wx:if="{{item.borrowed}}" class="borrowedtime">借出给:{{item.user}}</label>
+        <label class="permission">需要权限：{{item.permission}}</label>
+        <label class="note">备注：{{item.note}}</label>
+    </view>
+</view>
+
+</scroll-view>
+<button class="bt" bindtap="inq">查询</button>

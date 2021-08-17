@@ -1,0 +1,21 @@
+<!--相机组件-->
+<view wx:if="{{scr===''}}">
+  <camera  device-position="front" flash="off" binderror="error" style="width: {{ww}}px; height: {{wh}}px;">
+    <!--拍照按钮-->
+    <cover-image class='cancel' src="../../images/cancel.jpg" bindtap="cancel"></cover-image>
+    <cover-view class="take-bt">
+   <cover-image src='../../images/shot.jpg' bindtap="takePhoto"></cover-image>
+  </cover-view>
+  </camera>
+</view>
+
+<view wx:else>
+<!--拍照结果查看-->
+  <image class='preview' wx:if="{{scr}}"  src="{{scr}}" mode="aspectFill" style="height:{{wh}}px;width:{{ww}}px;display: block"></image>
+  <view >
+    <image  class="retake-bt"bindtap="retake" src="../../images/retake.jpg"></image>
+  </view>
+  <view>
+    <image class="cf-bt" src="../../images/selected.jpg" bindtap="upload"></image>
+  </view>
+</view>

@@ -1,0 +1,19 @@
+{
+  "pages": [
+    "pages/login_in/login",
+    "pages/index/index",
+    "pages/faceshot/face",
+    "pages/tooldetail/detail",
+    "pages/inqdetail/inq",
+    "pages/turnother/turn"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "E企管",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

@@ -1,0 +1,129 @@
+/* pages/root/root.wxss */
+.backimg{
+  width: 100%;
+  height: 100%;
+}
+.logintext{
+  font-size: 50px;
+  top: 10px;
+  color: blue;
+  text-align: center;
+}
+.usericon{
+  width: 100px;
+  height: 100px;
+}
+.userbox{
+  position: absolute;
+  z-index: 1;
+  height: 100px;
+  width: 80%;
+  box-shadow: 4px 4px 8px  rgba(0,0,0,0.5);
+  padding: 10px 10px;
+  border-radius: 16px;
+  background-color: white;
+  top: 20%;
+  left: 7%;
+  right: 10%;
+}
+.box{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  }
+.username{
+  margin-left: 10px;
+  margin-top: 10px;
+  position: absolute;
+  font-size: 20px;
+}
+.partment{
+  margin-left: 10px;
+  margin-top: 50px;
+  position: absolute;
+}
+.propoty{
+  margin-left: 80px;
+  margin-top: 50px;
+  position: absolute;
+}
+.gongnneg{
+  position: absolute;
+  z-index: 1;
+  height: 230px;
+  width: 80%;
+  box-shadow: 4px 4px 8px  rgba(0,0,0,0.5);
+  padding: 10px 10px;
+  border-radius: 16px;
+  background-color: white;
+  top: 45%;
+  left: 7%;
+  right: 10%;
+}
+.abllitybox {
+  width: 140px;
+  height: 80px;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0);
+  bottom: 10px;
+}
+.abicon{
+  top: 10px;
+  left: 10px;
+  position: absolute;
+  height: 50px;
+  width: 50px;
+}
+.descrip{
+  position: absolute;
+  top: 5px;
+  left: 50px;
+  width: 80px;
+  margin-left: 10px;
+  white-space:normal;
+}
+.descrip2{
+  position: absolute;
+  top: 10px;
+  left: 40px;
+  width: 240px;
+  margin-left: 24px;
+  font-size: 15px;
+  white-space:normal;
+}
+.right{
+  position: absolute;
+  left: 180px;
+  top:10px;
+}
+.scroll-view-item_H{
+  display: inline-block;
+  width: 100%;
+  height: 70px;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0);
+  bottom: 5px;
+}
+.scroll-view_H{
+  white-space: nowrap;
+}
+.delay{
+  position: absolute;
+  background-color: green;
+  right: 0%;
+  bottom: 0%;
+  width: 70px;
+  height: 30px;
+  font-size: 14px;
+  color: white;
+  border-radius: 16px;
+  text-align: center;
+}
+.bind_wx{
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  top: 3%;
+  right: 3%;
+}

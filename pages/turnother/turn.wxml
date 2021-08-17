@@ -1,0 +1,16 @@
+<scroll-view scroll-y="true" class="scroll" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll">
+  <view wx:for="{{detaillist}}">
+    <view class="box">
+      <image class="usericon" src="../../images/eq1.png"></image>
+        <form bindsubmit="submit">
+          <input name='name'class="name" value="{{item.equipmentName}}" disabled="false"/>
+          <label class="partment">申请人：{{item.username}}</label>
+          <label class="isborrowed"></label>
+          <label class="max_day">申请人工号：{{item.applicantJobNumber}}</label>
+          <button bindtap='agree' class="borrowedtime" size="mini" formType="submit">同意</button>
+          <button bindtap='refuse' class="refuse" size="mini" formType="submit">拒绝</button>
+        </form>
+    </view>
+</view>
+</scroll-view>
+<image class="empty" wx:if="{{detaillist[0]==undefined}}" src="../../images/empty.jpg"></image>

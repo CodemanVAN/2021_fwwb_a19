@@ -1,0 +1,16 @@
+<input class="input_bar"  placeholder="这里输入(支持工号，模糊设备名)"/>
+<image class="t"  src="../../images/scan.png" mode="aspectFit"></image>
+<scroll-view scroll-y="true" class="scroll" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll">
+  <view wx:for="{{detaillist}}">
+    <view class="box">
+      <image class="usericon" src="../../images/eq1.png"></image>
+        <label class="name">煤气灶</label>
+        <label class="partment">所属部门：物联网</label>
+        <label class="isborrowed">{{item.isborrowed}}</label>
+        <label class="max_day">最大借出：7天</label>
+        <label class="borrowedtime">借出时间：无</label>
+    </view>
+</view>
+
+</scroll-view>
+<button class="bt" bindtap="change">查询</button>

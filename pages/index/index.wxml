@@ -1,0 +1,62 @@
+<!--pages/root/root.wxml-->
+<view class="box">
+<image class="backimg" src="../../images/2222.jpg" mode="aspectFill">
+<view>
+    <view>
+      <!--头像-->
+      <view class="userbox">
+          <image src="{{usericon}}" class="usericon"></image>
+          <text class="username">{{name}}</text>
+          <text class="partment">{{department}}</text>
+          <text class="propoty">权限等级：{{permission}}</text>
+          <image src="../../images/wx.jpg" class="bind_wx" bindtap="bind_wx"></image>
+      </view>
+
+      <!--功能-->
+      <view class="gongnneg">
+        <view class="left">
+          <view class="abllitybox" bindtap="doUpload">
+            <image class="abicon" src="../../images/scan1.png"></image>
+            <text class="descrip">扫描设备二维码</text>
+          </view>
+          <view class="abllitybox">
+            <navigator url="../inqdetail/inq" open-type="navigate">
+            <image class="abicon" src="../../images/inq.png"></image>
+            <text class="descrip">查询设备信息</text>
+          </navigator>
+          </view>
+        </view>
+        <view class="right">
+          <view class="abllitybox">
+            <navigator url="../turnother/turn" open-type="navigate">
+            <image class="abicon" src="../../images/turn.png"></image>
+            <text class="descrip">转让设备申请列表</text>
+          </navigator>
+          </view>
+          <view class="abllitybox" bindtap="return">
+            <image class="abicon" src="../../images/return.png"></image>
+            <text class="descrip">管理员归还设备</text>
+          </view>
+        </view>
+        <wxs module="fn">
+          module.exports={
+            parseInt:function(num){
+                return parseInt(num);
+              }
+            }
+          </wxs>
+        <scroll-view class="scroll-view_H" scroll-x="true" enhanced="true" style="width: 100%">
+              <view wx:for="{{myE}}"class="scroll-view-item_H">
+                <image class="abicon" src="{{item.equipmentIcon}}"></image>
+                <text class="descrip2">你借出的 {{item.name}} 需再{{fn.parseInt(item.remainingUsageTimeHour/24)}}天{{fn.parseInt(item.remainingUsageTimeHour%24)}}小时{{fn.parseInt((item.remainingUsageTimeHour%24-fn.parseInt(item.remainingUsageTimeHour%24))*60)}}分内归还至{{item.storagePlace}}</text>
+                <form bindsubmit="delay">
+                  <input name='name' value="{{item.name}}" type="text" style="visibility: hidden;"/>
+                <button class='delay'size="mini" form-type="submit">延长时间</button>
+                </form>
+          </view>
+        </scroll-view>
+      </view>
+    </view>
+</view>
+</image>
+</view>

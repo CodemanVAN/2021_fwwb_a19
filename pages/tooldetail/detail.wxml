@@ -1,0 +1,18 @@
+<!--pages/tooldetail/detail.wxml-->
+<view wx:for="{{inqres}}">
+  <view class="box">
+      <image class="usericon" src="{{item.equipmentIcon}}"></image>
+      <image class="repair" src="../../images/repair.jpg" bindtap="repair_send"></image>
+        <label class="name">{{item.name}}</label>
+        <label class="partment">属于:{{item.department}}</label>
+        <label class="isborrowed" style="background-color:{{item.borrowed?'red':'blue'}}">{{item.borrowed?'已借出':'未借出'}}</label>
+        <label class="max_day">最长借出{{item.storageDays}}天</label>
+        <label wx:if="{{item.borrowed}}" class="borrowedtime">借出给:{{item.user}}</label>
+        <label class="permission">需要权限：{{item.permission}}</label>
+        <label class="note">备注：{{item.note}}</label>
+    </view>
+</view>
+<!-- 借出按钮 -->
+<view>
+<button class='bt'disabled='{{scanres}}'bindtap="jiechu">{{inqres[0].JobNumber==null?'确认借出设备':'申请转让'}}</button>
+</view>

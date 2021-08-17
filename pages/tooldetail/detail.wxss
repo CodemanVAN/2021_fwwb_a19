@@ -1,0 +1,119 @@
+/* pages/tooldetail/detail.wxss */
+
+
+.input_bar{
+  position: absolute;
+  left: 7%;
+  width: 80%;
+  box-shadow: 4px 4px 8px  rgba(0,0,0,0.5);
+  padding: 10px 10px;
+  border-radius: 16px;
+  background-color: white;
+}
+
+.box{
+  position: relative;
+  z-index: 1;
+  height: 100px;
+  width: 80%;
+  top: 10%;
+  margin-top: 5px;
+  box-shadow: 4px 4px 8px  rgba(0,0,0,0.5);
+  padding: 10px 10px;
+  border-radius: 16px;
+  background-color: #aebde0;
+  left: 7%;
+  margin-bottom: 10px;
+}
+.usericon{
+  top: 10px;
+  left: 10px;
+  position: absolute;
+  height: 90px;
+  width: 90px;
+}
+.bt{
+  position: absolute;
+  bottom: 10px;
+  left: 25%;
+  background-color:#aebde0;
+}
+.scroll{
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  top: 10%;
+  height: 600px;
+  z-index: -1;
+  white-space: nowrap;
+}
+.name {
+  position: absolute;
+  width: 100%;
+  left: 120px;
+  font-size: 18px;
+  font-weight: 1000;
+}
+.partment{
+  position: absolute;
+  left: 120px;
+  top: 35%;
+  font-size: 12px;
+}
+.isborrowed{
+  position: absolute;
+  left: 230px;
+  font-size: 12px;
+  top: 35%;
+  border-radius: 3px;
+  color: white;
+  padding: 1px 1px;
+  background-color: red;
+}
+.max_day{
+  position: absolute;
+  left: 120px;
+  top: 50%;
+  font-size: 12px;
+}
+.borrowedtime{
+  position: absolute;
+  left: 230px;
+  top: 50%;
+  font-size: 12px;
+}
+.note{
+  position: absolute;
+  left: 120px;
+  top: 75%;
+  width: fit-content;
+  font-size: 12px;
+  white-space:normal;
+}
+.permission{
+  position: absolute;
+  left: 120px;
+  top: 65%;
+  width: fit-content;
+  font-size: 12px;
+  white-space:normal;
+}
+.t{
+  z-index: 1;
+  position: absolute;
+  right: 10%;
+  top: 5px;
+  margin-top: 0px;
+  height: 30px;
+  width: 30px;
+}
+.repair{
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  z-index: 99999;
+  background-color: white;
+  border-radius: 30px;
+}
